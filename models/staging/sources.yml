@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: zillow_raw
+    database: real-estate-analytics-491922
+    schema: zillow_raw
+    tables:
+      - name: raw_zhvi
+        columns:
+          - name: RegionID
+            tests:
+              - not_null
+              - unique
+      - name: raw_zori
+        columns:
+          - name: RegionID
+            tests:
+              - not_null
+              - unique
+      - name: raw_inventory
+      - name: raw_sales_count
+      - name: raw_sale_to_list
+      - name: raw_days_to_pending
+      - name: raw_market_heat
+      - name: raw_affordability
+      - name: raw_income_needed
